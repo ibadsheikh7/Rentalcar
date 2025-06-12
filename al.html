@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental - Suzuki Alto</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      body 
+        font-family: Arial, sans-serif;
+        margin: 0; 
+        background-color: #f4f4f4;
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        min-height: 100vh;
+        padding-top: 20px; /
+      }
+
+      .container {
+        display: flex; 
+        width: 90%; 
+        max-width: 1200px; 
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+
+       .car-details {
+        flex: 2; 
+        padding: 30px;
+        border-right: 1px solid #eee; /* Separator line */
+      }
+      .car-details h2 {
+        margin-top: 0;
+        color: #333;
+      }
+      .car-details h3 {
+        color: #333;
+        margin-top: 25px;
+        margin-bottom: 15px;
+      }
+      .car-details h4 {
+        color: #555;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+
+      .car-image {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .car-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      /* Specifications Grid - Uses CSS Grid for alignment */
+      .specifications-grid {
+        display: grid;
+        grid-template-columns: auto 1fr; /* Two columns: auto width for strong, rest for span */
+        gap: 10px 15px; /* Row and column gap */
+        margin-bottom: 20px;
+      }
+      .specifications-grid strong {
+        color: #333;
+        font-weight: bold;
+      }
+      .specifications-grid span {
+        color: #555;
+      }
+
+      /* Car Features - Uses Flexbox for wrapping tags */
+      .car-features ul {
+        list-style: none;
+        padding: 0;
+        display: flex; /* Flexbox for wrapping feature tags */
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        gap: 10px; /* Space between tags */
+        margin-top: 15px;
+      }
+      .car-features ul li {
+        background: #e9f5ff;
+        padding: 8px 15px;
+        border-radius: 20px;
+        color: #007bff;
+        font-size: 0.9em;
+        border: 1px solid #cce5ff;
+      }
+
+      /* Description Styling */
+      .description p {
+        line-height: 1.6;
+        color: #666;
+        margin-bottom: 15px;
+      }
+      .description ul {
+        list-style: disc; /* Standard bullet points */
+        margin-left: 20px;
+        color: #666;
+        margin-bottom: 15px;
+      }
+      .description ul li {
+        margin-bottom: 8px;
+        line-height: 1.5;
+      }
+      .description ul li strong {
+        color: #333;
+      }
+
+      /* Booking Form Section */
+      .booking-form-section {
+        flex: 1; /* Takes 1 part of the flexible space - smaller for form */
+        padding: 30px;
+        background-color: #f9f9f9;
+      }
+      .booking-form-section h2 {
+        margin-top: 0;
+        color: #333;
+      }
+      .booking-form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #555;
+      }
+      .booking-form input[type="text"],
+      .booking-form input[type="email"],
+      .booking-form input[type="tel"],
+      .booking-form input[type="date"],
+      .booking-form select {
+        width: calc(100% - 22px); /* Full width minus padding and border */
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box; /* Include padding and border in the element's total width */
+      }
+      .booking-form button {
+        background-color: #007bff;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+      }
+      .booking-form button:hover {
+        background-color: #0056b3;
+      }
+
+      /* Responsive Design - Uses Flexbox for stacking columns on smaller screens */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column; /* Stack columns vertically on small screens */
+          width: 95%; /* Adjust width for smaller screens */
+        }
+        .car-details {
+          border-right: none; /* Remove right border when stacked */
+          border-bottom: 1px solid #eee; /* Add bottom border for separation */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="car-details">
+        <h2>Suzuki Alto</h2>
+        <div class="car-image">
+          <img src="./img/alto-1 (1).png" alt="Suzuki Alto" />
+        </div>
+
+        <h3>Specifications</h3>
+        <div class="specifications-grid">
+          <strong>Model:</strong> <span>2020-2024</span> <strong>Fuel:</strong>
+          <span>Petrol</span> <strong>Gear Type:</strong>
+          <span>Manual / AGS</span>
+        </div>
+
+        <h3>Car Features</h3>
+        <div class="car-features">
+          <ul>
+            <li>Air Condition</li>
+            <li>4 Seats</li>
+            <li>Excellent Fuel Economy</li>
+            <li>Compact Size</li>
+            <li>Easy Parking</li>
+            <li>With / Without Driver</li>
+            <li>Basic Infotainment (Variant Dependent)</li>
+            <li>Power Windows (Front - VXL Variant)</li>
+            <li>ABS Brakes (VXL Variant)</li>
+            <li>Keyless Entry (VXL Variant)</li>
+          </ul>
+        </div>
+
+        <div class="description">
+          <h3>Description of Listing</h3>
+          <h4>Suzuki Alto – Rent a Car</h4>
+          <p>
+            The Suzuki Alto is a highly economical and compact hatchback,
+            perfectly suited for city driving and short commutes. Known for its
+            exceptional fuel efficiency, ease of maneuverability, and
+            budget-friendly appeal, it offers a practical rental solution for
+            daily errands, quick trips, and navigating busy urban environments.
+          </p>
+
+          <h3>Why Deinfa and Why Suzuki Alto?</h3>
+          <p>
+            Renting the Suzuki Alto from Deinfa is an excellent choice for those
+            prioritizing cost-effectiveness, fuel efficiency, and a car that's
+            easy to handle in crowded areas. It's the ideal companion for your
+            daily city adventures.
+          </p>
+          <ul>
+            <li>
+              <strong>Unmatched Fuel Economy:</strong> The Alto is famous for
+              its outstanding mileage, significantly reducing your travel costs.
+            </li>
+            <li>
+              <strong>Nimble & Compact:</strong> Its small footprint makes it
+              incredibly easy to park and navigate through congested city
+              streets with confidence.
+            </li>
+            <li>
+              <strong>Economical & Practical:</strong> Enjoy low rental rates
+              coupled with minimal running expenses, making it a very
+              wallet-friendly option.
+            </li>
+            <li>
+              <strong>Reliable City Commuter:</strong> Suzuki's commitment to
+              reliability ensures a dependable and smooth ride for your daily
+              tasks and short journeys.
+            </li>
+            <li>
+              <strong>Inter/Intra City Travel:</strong> While shining in urban
+              settings, the Alto's comfort and efficiency also make it suitable
+              for light inter-city travel.
+            </li>
+            <li>
+              <strong>Flexible Rental Duration:</strong> Deinfa provides
+              adaptable rental durations for the Suzuki Alto, from a few hours
+              to daily, weekly, or longer terms, tailored to your specific
+              requirements.
+            </li>
+            <li>
+              <strong>Points to Remember:</strong> Always check the fuel level
+              upon pickup and return. Report any minor issues promptly.
+            </li>
+          </ul>
+          <p>
+            The Suzuki Alto combines practicality with efficiency, offering a
+            reliable and enjoyable ride especially in metropolitan areas. Its
+            modern features and comfortable ride make it a great option for
+            personal use or business errands. Choose Deinfa for a meticulously
+            maintained Suzuki Alto, ensuring a hassle-free and satisfying rental
+            experience.
+          </p>
+        </div>
+      </div>
+
+      <div class="booking-form-section">
+        <h2>Booking Form</h2>
+        <form class="booking-form" action="#" method="POST">
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" name="fullName" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <label for="pickupDate">Pickup Date:</label>
+          <input type="date" id="pickupDate" name="pickupDate" required />
+
+          <label for="returnDate">Return Date:</label>
+          <input type="date" id="returnDate" name="returnDate" required />
+
+          <label for="pickupLocation">Pickup Location:</label>
+          <input
+            type="text"
+            id="pickupLocation"
+            name="pickupLocation"
+            required
+          />
+
+          <label for="carModel">Car Model:</label>
+          <select id="carModel" name="carModel" required>
+            <option value="suzukiAlto" selected>Suzuki Alto</option>
+            <option value="hyundaiElantra">Hyundai Elantra</option>
+            <option value="havalJolion">Haval Jolion</option>
+            <option value="kiaSportage">KIA Sportage</option>
+            <option value="hyundaiTucson">Hyundai Tucson</option>
+            <option value="corollaCrossHev">Corolla Cross HEV</option>
+            <option value="havalH6hev">Haval H6 HEV</option>
+            <option value="otherModel">Other Model (if applicable)</option>
+          </select>
+
+          <button type="submit">Book Now</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
